@@ -1,0 +1,27 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: user-api
+  description: User management API
+  tags:
+    - nodejs
+    - express
+spec:
+  type: service
+  lifecycle: production
+  owner: backend-team
+  system: user-management
+  providesApis:
+    - user-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: user-api
+  description: User management API
+spec:
+  type: openapi
+  lifecycle: production
+  owner: backend-team
+  definition:
+    $text: https://github.com/placeholder-org-33/backend-api-svc/blob/main/openapi.yaml
