@@ -6,6 +6,9 @@ metadata:
   tags:
     - nodejs
     - express
+    - kubernetes
+  annotations:
+    backstage.io/kubernetes-id: user-api
 spec:
   type: service
   lifecycle: production
