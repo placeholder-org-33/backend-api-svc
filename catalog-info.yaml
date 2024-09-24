@@ -8,7 +8,7 @@ metadata:
     - kubernetes
   annotations:
     backstage.io/kubernetes-id: user-api
-    backstage.io/kubernetes-namespace: default
+    backstage.io/kubernetes-namespace: backstage
 spec:
   type: service
   lifecycle: production
