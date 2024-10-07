@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-api
+  namespace: backstage
+  labels:
+    backstage.io/kubernetes-id: user-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: user-api
+  template:
+    metadata:
+      labels:
+        app: user-api
+        backstage.io/kubernetes-id: user-api
+    spec:
+      containers:
+      - name: user-api
+        image: user-api:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3000
